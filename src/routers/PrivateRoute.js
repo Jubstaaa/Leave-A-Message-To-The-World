@@ -7,14 +7,15 @@ const PrivateRoute = ({ isAuthenticated, component: Component, ...rest }) => (
   <Route
     {...rest}
     component={(props) =>
-      isAuthenticated === props.location.state ? (
+      isAuthenticated === props.location.state &&
+      isAuthenticated !== undefined ? (
         <div>
-          {console.log(isAuthenticated)}
           <Component {...props} />
         </div>
       ) : (
         <>
           <Redirect to="/" />
+
           {alert(
             `You can only edit your own message. If you think there is a problem contact the admin "github.com/Jubstaaa"`
           )}

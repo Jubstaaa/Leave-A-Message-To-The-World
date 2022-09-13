@@ -16,7 +16,7 @@ const MessageListPage = (props) => {
           />
         ) : (
           <div className="alert alert-warning" role="alert">
-            Please login for leave message
+            Please login to leave message
           </div>
         )}
       </div>

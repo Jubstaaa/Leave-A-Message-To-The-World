@@ -7,7 +7,8 @@ const PrivateRoute = ({ isAuthenticated, component: Component, ...rest }) => (
   <Route
     {...rest}
     component={(props) =>
-      isAuthenticated ? (
+      isAuthenticated === "CuAvKmPxuwen97wHRLJ35JJYppr2" ||
+      "ve1cb2xmifb17pDJyZK7JSL5BXF3" ? (
         <div>
           <Component {...props} />
         </div>

@@ -8,6 +8,7 @@ const MessageListItem = ({
   description,
   displayName,
   photoUrl,
+  uid,
   isAuthenticated,
 }) => {
   let date = new Date(dateAdded);
@@ -38,9 +39,15 @@ const MessageListItem = ({
             </div>
             <div className="d-flex justify-content-between align-items-center">
               <p className="small p-1 mb-0">{description}</p>
-
               <div className="d-flex flex-row">
-                <Link to={`/edit/${id}`}>Edit</Link>
+                <Link
+                  to={{
+                    pathname: `/edit/${id}`,
+                    state: uid,
+                  }}
+                >
+                  Edit
+                </Link>
               </div>
             </div>
           </div>

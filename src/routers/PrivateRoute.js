@@ -7,8 +7,7 @@ const PrivateRoute = ({ isAuthenticated, component: Component, ...rest }) => (
   <Route
     {...rest}
     component={(props) =>
-      isAuthenticated === "CuAvKmPxuwen97wHRLJ35JJYppr2" &&
-      "ve1cb2xmifb17pDJyZK7JSL5BXF3" ? (
+      isAuthenticated === props.location.state ? (
         <div>
           {console.log(isAuthenticated)}
           <Component {...props} />
@@ -16,9 +15,8 @@ const PrivateRoute = ({ isAuthenticated, component: Component, ...rest }) => (
       ) : (
         <>
           <Redirect to="/" />
-          {console.log(isAuthenticated)}
           {alert(
-            "Only Admins Can Edit Messages Please Contact github.com/Jubstaaa"
+            `You can only edit your own message. If you think there is a problem contact the admin "github.com/Jubstaaa"`
           )}
         </>
       )

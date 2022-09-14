@@ -24,5 +24,5 @@
     - you can see the profile picture, name, and date and time of the sender of the message.
     - you can send message after login with google auth
     - when you log in, your profile picture will appear in the navbar and you can log out
-    - after logging in, you can edit and delete messages if you have admin authority.
+    - after logging in, you can edit and delete your own messages.
     - responsive design

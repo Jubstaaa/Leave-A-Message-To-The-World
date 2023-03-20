@@ -2,6 +2,8 @@
 
 > React App where you can see the messages sent to the application and send a message after logging in.
 
+![Imgur](https://i.imgur.com/tWb94HI.png)
+
 > Click to view live demo
 > (https://jubstaa-leave-a-message-to-the-world.netlify.app/)
 
